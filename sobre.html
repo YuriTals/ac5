@@ -10,82 +10,125 @@
     <link rel="manifest" href="/manifest.json" />
 
     <style>
-      body {
-        font-family: "Arial", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      header {
-        background-color: #343541;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-      }
+    header {
+      background-color: #343541;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
 
-      nav {
-        background-color: #333;
-        color: #fff;
-        padding: 10px 0;
-      }
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
 
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .menu-icon {
+      display: none;
+      text-align: right;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    .content-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .read-more {
+      display: none;
+    }
+
+    .read-more-btn {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #333333;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Adicionando Estilos para Dispositivos Móveis */
+
+    @media only screen and (max-width: 600px) {
       nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
+        display: none;
       }
 
-      nav li {
-        display: inline-block;
-        margin-right: 20px;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
+      nav.active ul {
+        display: block;
       }
 
       .menu-icon {
-        display: none;
-        text-align: right;
-        cursor: pointer;
-        margin-right: 20px;
-      }
-
-      .content-container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #f1f1f1;
-      }
-
-      .read-more {
-        display: none;
-      }
-
-      .read-more-btn {
         display: block;
-        text-align: center;
-        margin-top: 20px;
-        text-decoration: none;
-        padding: 10px 20px;
-        background-color: #333333;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
       }
 
-      footer {
-        text-align: center;
-        padding: 10px 0;
-        background-color: #333;
-        color: #fff;
-        position: relative;
-        bottom: 0;
-        width: 100%;
+      nav.active a.menu-icon {
+        text-align: right;
       }
+
+      nav.active ul {
+        text-align: center;
+      }
+
+      nav.active li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+      .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
     </style>
     <title>Quantum Docs</title>
   </head>
@@ -94,10 +137,7 @@
     <header>
       <div class="banner">
         <h1>Quantum Docs</h1>
-        <p>
-          Breve introdução à computação quântica. Descubra suas aplicações,
-          desafios e oportunidades.
-        </p>
+        <p>Conheça aqui o fantástico mundo da computação quântica!</p>
       </div>
     </header>
 
@@ -115,35 +155,183 @@
     </nav>
 
     <div class="content-container">
-      <h2>Sobre a computação quantica</h2>
-      <h3>O que é?</h3>
+      <h2>Computação Quântica: Fundamentos e perspectivas</h2>
       <p>
-        A computação quântica é um paradigma revolucionário na área da
-        computação que utiliza os princípios da mecânica quântica para realizar
-        operações computacionais. Enquanto a computação clássica utiliza bits
-        que podem existir nos estados 0 ou 1, a computação quântica utiliza
-        qubits, que podem existir em múltiplos estados simultaneamente, graças a
-        um fenômeno chamado superposição quântica.
+        No século XX, a humanidade passou por uma fase de intenso desenvolvimento tecnológico, coisas nunca antes pensadas se tornaram realidades e mudaram todo o contexto e o modo de vida da sociedade. Entre essas diversas inovações aquelas que sem dúvida marcaram a nossa história foram o advento da eletricidade e da computação.
+      </p>
+
+      <p>
+        Após a publicação em 1936 do artigo a Máquina de Turing, escrito pelo matemático britânico Alan Turing, os estudos sobre computação foram impulsionados e diversos computadores foram surgindo, primeiramente mecânicos e pouco tempo depois digitais. Desde então os computadores vem se tornando cada vez menores e mais rápidos, no entanto continuam seguindo a mesma lógica de funcionamento proposta pelo matemático. Seguir essa lógica implica que os computadores podem resolver problemas que uma Máquina de Turing resolveria. Entretanto, é válido ressaltar que já em 1936, a tese de Church-Turing mostrou que a Máquina de Turing é limitada a resolver problemas chamados computáveis, os quais vemos de costume em automações e programas no geral.
+      </p>
+
+      <p>
+        Além disso, os computadores atuais em sua maioria são digitais, sendo assim, são dispositivos eletrônicos que possuem em seus circuitos lógicos apenas dois estados: ligado ou desligado, verdadeiro ou falso, 1 ou 0, corrente elétrica presente ou corrente elétrica ausente. Portanto, são necessários componentes eletrônicos que assumem esses dois estados e, quanto mais desses componentes confinados em um menor espaço, em teoria, maior será o poder computacional. O problema com essa abordagem é que existe um limite físico, portanto chegará um dia em que será impossível diminuir o tamanho desses componentes sem esbarrar em fenômenos do reino quântico. Tendo em vista isso, outras abordagens de computação foram surgindo, entre elas a computação com DNA, a Máquina de Turing não determinística, e a computação quântica, que explicaremos em mais detalhes adiante.
       </p>
       <div class="read-more" id="readMore">
         <!-- Daqui pra baixo fica o conteudo para ler mais -->
         <p>
-          Além da superposição, os qubits também podem estar entrelaçados, o que
-          significa que o estado de um qubit está diretamente relacionado ao
-          estado de outro, mesmo que estejam fisicamente separados. Essas
-          propriedades quânticas possibilitam que a computação quântica realize
-          certos cálculos de maneira exponencialmente mais eficiente do que os
-          computadores clássicos em algumas tarefas específicas.
+          A computação quântica, como o nome sugere, se utiliza de comportamentos quânticos para a computação, logo, é necessário primeiramente entendermos alguns conceitos e fenômenos da mecânica quântica. Tudo começou quando Thomas Young, por volta de 1901, realizou o experimento da fenda dupla*, experimento no qual partículas elementares como fótons ou elétrons são “arremessados” contra uma estrutura que possui duas fendas. A partir dos resultados inesperados desse experimento foi compreendido que quando se trata de partículas elementares, ou seja, a nível quântico, o comportamento e os fenômenos que ocorrem se diferem completamente das previsões e cálculos físicos tradicionais.
         </p>
 
         <p>
-          A computação quântica tem o potencial de transformar
-          significativamente várias áreas, incluindo criptografia, simulações de
-          sistemas quânticos, otimização, inteligência artificial e descoberta
-          de novos materiais. Apesar dos avanços promissores, a construção de
-          computadores quânticos robustos e a superação dos desafios associados,
-          como a correção de erros quânticos, são áreas ativas de pesquisa.
+          Visto que nenhuma outra área de estudo conseguia explicar tais fenômenos, foi necessária a criação de uma nova disciplina, a mecânica quântica. O princípio fundamental da mecânica quântica, também oriundo do fenômeno tratado no experimento, é a sobreposição quântica, que diz que um sistema físico, como um elétron por exemplo, existe parcialmente e simultaneamente em todos os estados teoricamente possíveis antes de ser medido.
         </p>
+
+
+        <p>
+          Outro fenômeno, o emaranhamento ou entrelaçamento quântico* é quando dois ou mais objetos se conectam fortemente de forma que uma parte não pode ser analisada adequadamente sem que a outra parte seja igualmente afetada, e isso ocorre independentemente da distância entre esses objetos. Imaginemos dois elétrons emaranhados, ou seja,  com propriedades interligadas, sendo assim, se um elétron possui spin up – uma propriedade do comportamento do elétron em meio a um campo magnético – o outro elétron emaranhado possuirá spin down, e, como dito anteriormente, isso independe da distância desses elétrons.
+        </p>
+
+        <img src="img/img1.jpg" alt="Quantum image" style="align-items: center; max-width: 100%;">
+
+        <p>
+          Dessa forma, supondo dois objetos emaranhados, ao analisarmos a propriedade de apenas um único objeto já saberemos de antemão a propriedade de ambos os objetos, ou seja, em termos de computação, precisaremos processar apenas uma parte dos dados.
+        </p>
+
+        <p>
+          Entendidos alguns fenômenos envolvidos, é possível introduzir o conceito de qubit. O qubit é uma unidade de informação quântica que, diferente dos bits tradicionais, pode assumir os valores 0, 1 ou uma sobreposição de ambos. Sendo assim, tem sua informação descrita por um vetor de espaço bidimensional sobre números complexos da forma:
+        </p>
+
+        <img src="img/img2.png" alt="numeros complexos">
+
+        <p>
+          Onde <img src="img/img3.png">representa o estado do qubit, <img src="img/img4.png"> e <img src="img/img5.png"> são os possíveis valores e α e β são geralmente números complexos.
+        </p>
+
+        <p>
+          Outra importante diferença entre os bits e os qubits é que qubits podem estar entrelaçados entre si. Sendo assim, de acordo com a quantidade de qubits entrelaçados e o modo como são usados, a computação quântica, quando comparada com a tradicional, pode atingir valores extraordinários:
+        </p>
+
+        <ul>
+          <li>1 qubit = 2 bits</li>
+          <li>2 qubits = 4 bits</li>
+          <li>3 qubits = 8 bits (1 byte)</li>
+          <li>4 qubits = 16 bits</li>
+          <li>13 qubits = 8.192 bits (1kb)</li>
+          <li>23 qubits = 8.388.608 bits (1mb)</li>
+          <li>33 qubits = 8.589.934.592 bits (1gb)</li>
+          <li>43 qubits = 8.796.093.022.208 bits (1 terabyte)</li>
+          <li>n qubits = 2^n bits</li>
+        </ul>
+
+        <p>
+          Podendo ser exponencialmente mais poderosos que os bits tradicionais, os qubits abrem margem para vários problemas antes tidos como inviáveis computacionalmente. Em 1993, o estadunidense Peter Shor formulou um algoritmo quântico capaz de decompor um número com muitos algarismos em seus fatores primos, o qual foi nomeado como algoritmo de Shor. O ponto chave é que criptografias complexas, usadas na segurança dos nossos dados, são justamente baseadas nessa fatoração, visto que a quebra da criptografia seria inviável computacionalmente. Porém, essa não é uma realidade para computadores quânticos, que por meio do algoritmo de Shor conseguiriam quebrar uma criptografia em tempo polinomial em relação ao número de bits.
+        </p>
+
+        <img src="img/img6.png"style="align-items: center; max-width: 100%;">
+
+        <p>
+          Entretanto nem tudo está perdido, embora a criptografia atual esteja com seus dias contados, a computação quântica torna possível o surgimento de uma nova criptografia, a criptografia quântica. Muito mais segura que qualquer outro método de criptografia utilizado nas comunicações atuais, a criptografia quântica destaca-se por não necessitar de comunicações secretas prévias, como envio de chaves, pois a sua segurança se baseia em leis físicas. A maneira como essa criptografia é implementada diverge entre os existentes protocolos quânticos de comunicação, porém, a ideia principal é a utilização de um sistema físico entre os usuários do canal de comunicação, assim, caso algum intruso tente interceptá-lo, o estado quântico desse sistema será quebrado, tornando possível a identificação de uma invasão. Portanto, ainda que considerado um invasor com poder computacional ilimitado, essa criptografia permanece segura.
+        </p>
+
+        <p>
+          Além da criptografia, incríveis resultados em algoritmos de busca e otimização, simulação de sistemas quânticos e solução de sistemas lineares serão possíveis com o advento dessa nova tecnologia que em breve causará seu impacto no mundo.
+        </p>
+
+        <a class="button" href="https://mybigtoe.com.br/experimento-dupla-fenda-quantica/">Experimento da fenda dupla</a>
+        <a class="button" href="https://www.misteriosdouniverso.net/2015/03/o-que-e-entrelacamento-quantico.html ">Emaranhamento quântico</a>
+
+        <h2>Computação Quântica: Definição</h2>
+        <h3>O que é computação quântica?</h3>
+
+        <p>Computação quântica é um campo multidisciplinar que compreende aspectos da ciência da computação, da física e da matemática e que utiliza a mecânica quântica para resolver problemas complexos mais rapidamente do que em computadores tradicionais. O campo da computação quântica inclui pesquisa de hardware e desenvolvimento de aplicações. Os computadores quânticos são capazes de resolver certos tipos de problemas mais rapidamente do que os computadores tradicionais, aproveitando os efeitos da mecânica quântica, como superposição e interferência quântica. Algumas aplicações em que os computadores quânticos podem fornecer esse aumento de velocidade incluem Machine Learning (ML), otimização e simulação de sistemas físicos. Eventuais casos de uso podem ser a otimização de portfólios em finanças ou a simulação de sistemas químicos, resolvendo problemas que atualmente são impossíveis até mesmo para os supercomputadores mais poderosos do mercado.</p>
+
+        <h3>Qual é a vantagem da computação quântica?</h3>
+        <p>Atualmente, nenhum computador quântico pode executar uma tarefa útil de forma mais rápida, barata ou eficiente quando comparado a um computador tradicional. A vantagem quântica está no limiar em que construímos um sistema quântico que pode realizar operações que nem mesmo o melhor computador tradicional consegue simular em um período razoável.</p>
+
+        <h3>O que é mecânica quântica?</h3>
+        <p>A mecânica quântica é a área da física que estuda o comportamento das partículas em um nível microscópico. Em níveis subatômicos, as equações que descrevem como as partículas se comportam são diferentes daquelas que descrevem o mundo macroscópico ao nosso redor. Os computadores quânticos aproveitam esses comportamentos para realizar cálculos de uma maneira completamente nova.</p>
+
+        <h3>O que é um bit quântico?</h3>
+        <p>Bits quânticos, ou qubits, são representados por partículas quânticas. A manipulação de bits quânticos por dispositivos de controle é a essência da capacidade de processamento de um computador quântico. Bits quânticos em computadores quânticos são análogos aos bits em computadores tradicionais. Em sua essência, o processador de uma máquina tradicional realiza todo o seu trabalho ao manipular bits. De forma semelhante, o processador quântico realiza todo o seu trabalho ao processar bits quânticos.</p>
+
+        <h3>Como os bits quânticos são diferentes dos bits clássicos?</h3>
+        <p>Na computação clássica, o bit corresponde a um sinal eletrônico que está positivo ou negativo. O valor do bit clássico pode ser um (positivo) ou zero (negativo). No entanto, como o bit quântico é baseado nas leis da mecânica quântica, ele pode ser colocado em uma superposição de estados.</p>
+
+        <h3>Quais são os princípios da computação quântica?</h3>
+        <p>Um computador quântico funciona usando princípios quânticos. Os princípios quânticos requerem um novo dicionário de termos para serem totalmente compreendidos. Os termos incluem superposição, entrelaçamento e decoerência. Vamos entender esses princípios a seguir.</p>
+
+        <h2>Superposição</h2>
+        <p>A superposição afirma que, assim como as ondas na física clássica, você pode adicionar dois ou mais estados quânticos e o resultado será outro estado quântico válido. Por outro lado, você também pode representar cada estado quântico como uma soma de dois ou mais estados distintos. Essa superposição de bits quânticos fornece aos computadores quânticos seu paralelismo inerente, permitindo que processem milhões de operações simultaneamente.</p>
+
+        <h2>Entrelaçamento</h2>
+        <p>O entrelaçamento quântico ocorre quando dois sistemas se ligam tão intimamente que o conhecimento sobre um fornece a você conhecimento imediato sobre o outro, não importa quão distantes eles estejam. Os processadores quânticos podem obter conclusões sobre uma partícula medindo outra. Por exemplo, eles podem determinar que, se um bit quântico tem rotações ascendentes, o outro sempre terá rotações descendentes e vice-versa. O entrelaçamento quântico permite que os computadores quânticos resolvam problemas complexos mais rapidamente.</p>
+        <p>Quando um estado quântico é medido, a função de onda colapsa e você mede o estado como zero ou um. Nesse estado conhecido ou determinístico, o bit quântico atua como um bit clássico. O entrelaçamento corresponde a capacidade dos bits quânticos correlacionarem seu estado com outros bits quânticos.</p>
+
+        <h2>Decoerência</h2>
+        <p>A decoerência é a perda do estado quântico em um bit quântico. Fatores ambientais, como a radiação, podem causar o colapso do estado quântico dos bits quânticos. Um dos grandes desafios de engenharia na construção de um computador quântico é projetar vários recursos que tentam retardar a decoerência do estado, como a construção de estruturas especiais que protegem os bits quânticos de campos externos.</p>
+
+        <h2>Quais são os componentes de um computador quântico?</h2>
+        <p>Os computadores quânticos têm hardware e software, de forma semelhante a um computador tradicional.</p>
+        <h3>Hardware quântico</h3>
+        <p>O hardware quântico tem três componentes principais.</p>
+        <h3>Plano de dados quânticos</h3>
+        <p>O plano de dados quânticos é a essência do computador quântico e inclui os bits quânticos físicos e as estruturas necessárias para mantê-los no lugar.</p>
+        <h3>Plano de controle e medição</h3>
+        <p>O plano de controle e medição converte os sinais digitais em sinais analógicos ou de controle de ondas. Esses sinais analógicos executam as operações nos bits quânticos do plano de dados quânticos.</p>
+        <h3>Plano de processador de controle e processador host</h3>
+        <p>O plano de processador de controle implementa o algoritmo quântico ou a sequência de operações. O processador host interage com o software quântico e fornece um sinal digital ou uma sequência de bits clássicos para o plano de controle e medição.</p>
+        <h3>Software quântico</h3>
+        <p>O software quântico implementa algoritmos quânticos exclusivos usando circuitos quânticos. Um circuito quântico é uma rotina de computação que define uma série de operações quânticas lógicas nos bits quânticos subjacentes. Os desenvolvedores podem usar várias ferramentas e bibliotecas de desenvolvimento de software para programar código de algoritmos quânticos.</p>
+        <h3>Quais são os tipos de tecnologia quântica?</h3>
+        <p>Ainda não foi apresentada a melhor maneira de se construir um computador quântico tolerante a falhas. Assim, diversas empresas e grupos de pesquisa estão investigando diferentes tipos de bits quânticos. Veja a seguir breves exemplos de algumas dessas tecnologias de bits quânticos.</p>
+        <h3>Processadores de armadilhas de íons baseados em portas quânticas</h3>
+        <p>Um computador quântico baseado em portas quânticas é um dispositivo que recebe dados de entrada e os transforma de acordo com uma operação unitária predefinida. Geralmente, a operação é representada por um circuito quântico e é análoga às operações de portas em sistemas eletrônicos tradicionais. No entanto, as portas quânticas são totalmente diferentes das portas eletrônicas.</p>
+        <p>Computadores quânticos de íons aprisionados implementam bits quânticos usando estados eletrônicos de átomos carregados, denominados de íons. Os íons são confinados e suspensos acima da armadilha microfabricada usando campos eletromagnéticos. Sistemas baseados em íons aprisionados aplicam portas quânticas utilizando lasers para manipular o estado eletrônico do íon.  Os bits quânticos de íons aprisionados usam átomos que vêm da natureza ao invés de fabricá-los sinteticamente.</p>
+        <h3>Processadores de supercondutores baseados em portas quânticas</h3>
+        <p>A supercondutividade é um conjunto de propriedades físicas que você pode observar em certos materiais, como mercúrio e hélio, em temperaturas muito baixas. Nesses materiais, você pode observar uma temperatura crítica característica abaixo da qual a resistência elétrica é zero e os campos de fluxo magnético são expelidos. Uma corrente elétrica através do ciclo de um fio supercondutor pode persistir indefinidamente sem a necessidade de fontes de energia.</p>
+        <p>A computação quântica supercondutora corresponde a uma implementação de um computador quântico em circuitos eletrônicos supercondutores. Os bits quânticos supercondutores são criados com circuitos elétricos supercondutores que operam em temperatura criogênica.</p>
+        <h3>Processadores fotônicos</h3>
+        <p>Um processador quântico fotônico é um dispositivo que manipula a luz para realização de cálculos. Os computadores quânticos fotônicos usam fontes de luz quânticas que emitem pulsos de luz comprimidos, com equivalentes de bits quânticos que correspondem aos modos de um operador contínuo, como posição ou momento.</p>
+        <h3>Processadores de átomos neutros</h3>
+        <p>A tecnologia de bits quânticos de átomos neutros é semelhante à tecnologia de íons aprisionados. No entanto, ela usa luz em vez de forças eletromagnéticas para aprisionar o bit quântico e mantê-lo em posição. Os átomos não estão carregados e os circuitos podem operar à temperatura ambiente.</p>
+        <h3>Processadores de átomos de Rydberg</h3>
+        <p>Um átomo de Rydberg corresponde a um átomo excitado que tem, em média, um ou mais elétrons distantes do núcleo. Os átomos de Rydberg têm várias propriedades peculiares, incluindo uma resposta exagerada a campos elétricos e magnéticos, bem como vida longa. Quando usados como bits quânticos, eles oferecem interações atômicas fortes e controláveis que você pode ajustar ao selecionar diferentes estados.</p>
+        <h3>Recozedores quânticos</h3>
+        <p>O recozimento quântico usa um processo físico para colocar os bits quânticos de um sistema quântico em um mínimo absoluto de energia. Em seguida, o hardware altera levemente a configuração do sistema para que seu cenário de energia reflita o problema que precisa ser resolvido. A vantagem dos recozedores quânticos é que o número de bits quânticos pode ser muito maior do que os disponíveis em um sistema baseado em portas quânticas. No entanto, seu uso é limitado apenas a casos específicos.</p>
+
+        <h2>Como as empresas usam a computação quântica?</h2>
+        <h4>A computação quântica pode revolucionar as indústrias. Veja abaixo alguns exemplos de casos de uso:</h4>
+
+        <h2><b>ML ou Machine Learning</b></h2>
+        <p>O machine learning (ML) corresponde ao processo de análise de grandes quantidades de dados para ajudar os computadores a fazer melhores previsões e decisões. A pesquisa em computação quântica estuda os limites físicos do processamento de informações e está abrindo novos caminhos na física fundamental. Essa pesquisa conduz avanços em muitos campos da ciência e da indústria, como a química, a otimização e a simulação molecular. Também é uma área de interesse crescente aos serviços financeiros para previsão dos movimentos do mercado e aprimoramento das operações de manufatura.</p>
+
+        <h2><b>Otimização</b></h2>
+        <p>A computação quântica pode melhorar a pesquisa e o desenvolvimento, a otimização da cadeia de suprimentos e a produção. Por exemplo, você pode aplicar a computação quântica para diminuir os custos relacionados ao processo de fabricação e diminuir os tempos de ciclo otimizando elementos como o planejamento de caminhos em processos complexos. Outra aplicação é a otimização quântica de carteiras de empréstimos para que os credores possam liberar capital, reduzir as taxas de juros e melhorar suas ofertas.</p>
+
+        <h2><b>Simulação</b></h2>
+        <p>O esforço computacional necessário para simular sistemas com precisão escala exponencialmente com a complexidade das moléculas e materiais de medicamentos. Mesmo usando métodos de aproximação, os supercomputadores atuais não conseguem atingir o nível de precisão que essas simulações exigem. A computação quântica tem potencial para resolver alguns dos problemas computacionais mais desafiadores enfrentados na química, permitindo que a comunidade científica faça simulações químicas que são intratáveis atualmente. Por exemplo, a <a href="https://aws.amazon.com/blogs/quantum-computing/quantum-chemistry-with-qucos-qubec-on-amazon-braket/">Pasqal</a> desenvolveu seu software computacional QUBEC para executar simulações químicas. O QUBEC automatiza o trabalho complexo necessário para a execução de tarefas computacionais quânticas, desde o provisionamento automático da infraestrutura de computação até a execução de cálculos clássicos de pré e pós-processamento, bem como a execução de tarefas de mitigação de erros.</p>
+
+        <img src="img/img8.png" style="align-items: center; max-width: 100%;">
+
+        <h2>Como você pode começar a usar a computação quântica?</h2>
+        <p>Se você desejar experimentar a computação quântica, pode começar com um emulador de hardware quântico em sua máquina local. Os emuladores são softwares regulares que imitam o comportamento quântico em um computador tradicional. Eles são previsíveis e permitem que você veja estados quânticos. Eles são úteis se você deseja testar seus algoritmos antes de investir em tempo de hardware quântico. No entanto, eles não podem recriar o comportamento quântico real.</p>
+        <p>Você também pode usar um serviço de computação quântica em nuvem para programar em um verdadeiro computador quântico sem investir em hardware de alto custo, como por exemplo o <a href="https://aws.amazon.com/braket/">Amazon Bracket</a></p>
+
+        <h2>
+          Referências Bibliográficas:
+        </h2>
+
+        <ul>
+          Vignatti, André Luís; Netto, Francisco Summa; Bittencourt, Luiz Fernando. Uma Introdução à Computação Quântica. Paraná, 2004.
+        </ul>
+
+        <ul>
+          Simões, Davi. A Rebeldia dos Elétrons | Desmistificando a Física Quântica #01. Disponível em: <a href="https://www.youtube.com/watch?v=8A8TE5JbqJA"> Clique aqui!</a>
+        </ul>
+
+        <ul>
+          Simões, Davi. O Observador Define a Realidade? (A Sobreposição Quântica) | Desmistificando a Física Quântica #02. Disponível em: <a href="https://www.youtube.com/watch?v=YKOo6bZ9nx4&t=969s"> Clique aqui!</a>
+          </a>
+        </ul>
+
+        <ul>
+          Mattielo, Felipe; Silva, Gesiel Gomes; Amorim, Ronni Geraldo Gomes; da Silva, Washington Barbosa. Decifrando a Computação Quântica. Minas Gerais, 2012. Disponível em: <a href="https://homepages.dcc.ufmg.br/~joaofnc/artigos/Computacao%20Quantica/Fundamentos/DECIFRANDO%20A%20COMPUTACAO%20QUANTICA.pdf"> Clique aqui!</a>
+        </ul>
+
+        <ul>Amazon. O que é Computação Quântica. Disponível em: <a href="https://aws.amazon.com/pt/what-is/quantum-computing/">Clique aqui!</a></ul>
+        <ul>Amazon. Amazon Bracket. Disponível em: <a href="https://aws.amazon.com/braket/">Clique aqui!</a></ul>
+
       </div>
       <a href="javascript:void(0);"onclick="toggleReadMore()"class="read-more-btn">Continue a leitura!</a>
     </div>

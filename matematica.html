@@ -14,6 +14,7 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
 
     header {
@@ -79,15 +80,12 @@
 
     footer {
       text-align: center;
-      padding: 10px 0;
+      padding: 20px 0; /* Aumentei o padding para garantir espaço suficiente */
       background-color: #333;
       color: #fff;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      position: relative; /* Alterei de fixed para relative */
+      margin-top: 20px; /* Adicionei margem superior para separar do conteúdo */
     }
-
-    /* Adicionando Estilos para Dispositivos Móveis */
 
     @media only screen and (max-width: 600px) {
       nav ul {
@@ -113,6 +111,17 @@
       nav.active li {
         display: block;
         margin: 10px 0;
+      }
+
+      /* Ajuste no estilo do footer para dispositivos móveis */
+      footer {
+        position: relative;
+        margin-top: 20px; /* Adicionei margem superior para separar do conteúdo */
+      }
+
+      /* Adicionando margem superior ao conteúdo para evitar sobreposição com o footer */
+      .content-container {
+        margin-bottom: 80px; /* Ajuste conforme necessário */
       }
     }
   </style>
@@ -153,29 +162,29 @@
       Os qubits (bits quânticos) são termos binários que podem assumir estados superpostos (a grosso modo, 1 e 0 ao mesmo tempo). Os estados desses bits quânticos devem ser representados como vetores.
       Os qubits possuem duas bases ortonormais: |0⟩ e |1⟩, onde:
       <p>
-        <img src="img\img1.png"></p>
+        <img src="img\img9.png" style="align-items: center; max-width: 100%;"></p>
       Como você deve ter reparado, um valor (como 0 ou 1) entre os caracteres “|” e “⟩” corresponde a um vetor. Este símbolo é chamado ket. Também existe o símbolo bra (“⟨…|”), para o qual ⟨x| corresponde à transposta conjugada do ket |x⟩. Neste caso, ⟨x|y⟩ é o produto interno dos vetores |x⟩ e |y⟩. Esta notação é chamada Bra-ket ou notação de Dirac. Os vetores que são representados pela notação Bra-ket pertencem a espaços de Hilbert — espaços vetoriais com noções de ângulo e distância que não necessariamente têm dimensões finitas.
       Os possíveis estados de um qubit podem ser expressos pela seguinte combinação linear:
       <p>
-        <img src="img\img2.png"></p>
+        <img src="img\img10.png" style="align-items: center; max-width: 100%;"></p>
       Onde |ψ⟩ é um vetor no espaço vetorial ℂ² que representa o estado do qubit, e os coeficientes ω₀ e ω₁ são números complexos que representam as amplitudes de probabilidade dos estados |0⟩ e |1⟩.
       Quando o estado |ψ⟩ é medido experimentalmente, manifesta um dos estados base |0⟩ e |1⟩ (fenômeno este que é conhecido na mecânica quântica como “colapso”). A probabilidade do estado |0⟩ se manifestar é |ω₀|² (quadrado do absoluto de ω₀), e a probabilidade do estado |1⟩ se manifestar é |ω₁|² (quadrado do absoluto de ω₁). Isto significa que:
       </p>
 
-      <p><img src="img\img3.png">
+      <p><img src="img\img11.png" style="align-items: center; max-width: 100%;">
         <h5>
           Esfera de Bloch</h5>
         <p>
           Representar graficamente um vetor em ℂ² não é tão simples. Um único número complexo com parte imaginária diferente de zero é análogo a um vetor em ℝ² (uma dimensão para a parte real e outra para o fator real da unidade imaginária), e seguindo esta mesma lógica, um vetor em ℂ² é análogo a um vetor em ℝ⁴, que não pode ser representado graficamente usando o sistema de coordenadas cartesiano. No entanto, um vetor em ℂ² que representa especificamente o estado de um qubit pode ser generalizado pela seguinte fórmula:
         </p>
         <p>
-          <img src="img\img4.png"></p>
+          <img src="img\img12.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Onde θ e ϕ são ângulos em radianos.
           Usando esta fórmula (4), é possível representar graficamente o estado de um qubit em coordenadas polares, como mostra a imagem a seguir:
         </p>
         <p>
-          <img src="img\img5.png"></p>
+          <img src="img\img13.png" style="align-items: center; max-width: 100%;"></p>
 
         <p>
           Esta representação gráfica do estado de um qubit é denominada esfera de Bloch.
@@ -183,40 +192,40 @@
           Registradores quânticos e estados globais
           Com n bits, é possível formar 2ⁿ combinações de 1 e 0. Por exemplo: com um par de bits (um crumb) é possível formar as combinações 00, 01, 10 e 11 (um total de 2² combinações). Isso pode ser expresso matematicamente usando conjuntos, considerando bit={0,1}, da seguinte forma:
         </p>
-        <img src="img\img6.png"></p>
+        <img src="img\img14.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Este símbolo parecido com a letra “x” na equação 5 é um produto cartesiano — um operador que produz um conjunto de tuplas com todas as combinações possíveis de elementos pertencentes aos conjuntos operandos. Este operador tem a seguinte definição:
         </p>
-        <img src="img\img7.png"></p>
+        <img src="img\img15.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Com qubits é diferente: todos os estados devem ser representados por vetores, inclusive estados formados por mais de um qubit. Neste caso, o produto cartesiano não serve. É necessário usar um operador que produza um terceiro vetor ao invés de um conjunto de tuplas para representar as combinações de estados dos qubits. Este operador é o produto tensorial (também conhecido como kronecker), representado pelo símbolo “⊗”.
           O estado de um “crumb de qubits” de estados |a⟩ e |b⟩ pode ser expresso como um produto tensorial de |a⟩ e |b⟩ da seguinte forma:
         </p>
-        <img src="img\img8.png"></p>
+        <img src="img\img16.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Onde |ab⟩ é o estado global do par de qubits.
           Este produto tensorial pode ser expresso mais detalhadamente da seguinte forma:
         </p>
-        <img src="img\img9.png"></p>
+        <img src="img\img17.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           No geral, um produto tensorial entre um par de matrizes A e B tem a seguinte definição</p>
-        <img src="img\img10.png"></p>
+        <img src="img\img18.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Voltando ao exemplo do crumb — definindo os qubits |a⟩ e |b⟩ como:
         </p>
-        <img src="img\img11.png"></p>
+        <img src="img\img19.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           O estado global |ab⟩ pode ser definido como a seguinte combinação linear de 4 bases:
         </p>
-        <img src="img\img12.png"></p>
+        <img src="img\img20.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Considerando |ψ⟩=|ab⟩, α=α₀β₀, β=α₀β₁, γ=α₁β₀, δ=α₁β₁, substituindo as amplitudes αₙβₘ pelas equivalentes α, β, γ e δ, temos:
         </p>
-        <img src="img\img13.png"></p>
+        <img src="img\img21.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           Onde:
         </p>
-        <img src="img\img14.png"></p>
+        <img src="img\img22.png" style="align-items: center; max-width: 100%;"></p>
         <p>
           
         </p>
