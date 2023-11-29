@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/atom.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="manifest" href="/manifest.json">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #343541;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .menu-icon {
+      display: none;
+      text-align: right;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 25px auto;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    section a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Adicionando Estilos para Dispositivos Móveis */
+
+    @media only screen and (max-width: 600px) {
+      nav ul {
+        display: none;
+      }
+
+      nav.active ul {
+        display: block;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      nav.active a.menu-icon {
+        text-align: right;
+      }
+
+      nav.active ul {
+        text-align: center;
+      }
+
+      nav.active li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  <title>Quantum Docs</title>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <h1>Quantum Docs</h1>
+      <p>Breve introdução à computação quântica. Descubra suas aplicações, desafios e oportunidades.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a class="menu-icon" onclick="toggleMenu()">&#9776; Menu</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="ingressar.html">Como Ingressar</a></li>
+      <li><a href="aplicacoes.html">Aplicações Práticas</a></li>
+      <li><a href="matematica.html">Matemática da Computação Quântica</a></li>
+      <li><a href="faq.html">FAQ</a></li> <!-- Novo link para FAQ -->
+    </ul>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre a Computação Quântica</h2>
+    <p>Explicação básica sobre o que é a computação quântica...</p>
+    <a href="sobre.html">Saiba Mais</a>
+  </section>
+
+  <section id="ingressar">
+    <h2>Como Ingressar na Área de Computação Quântica</h2>
+    <p>Educação e habilidades necessárias...</p>
+    <a href="ingressar.html">Saiba Mais</a>
+  </section>
+
+  <section id="aplicacoes">
+    <h2>Aplicações Práticas da Computação Quântica</h2>
+    <p>Setores e indústrias que podem se beneficiar...</p>
+    <a href="aplicacoes.html">Saiba Mais</a>
+  </section>
+
+  <section id="matematica">
+    <h2>Entendendo a Matemática por Trás da Computação Quântica</h2>
+    <p>Conceitos matemáticos fundamentais...</p>
+    <a href="matematica.html">Saiba Mais</a>
+  </section>
+
+  <section id="faq">
+    <h2>Perguntas Frequentes (FAQ)</h2>
+    <p>Aqui estão algumas perguntas frequentes sobre computação quântica...</p>
+    <a href="faq.html">Saiba Mais</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Quantum Docs</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

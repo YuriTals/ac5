@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/atom.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #343541;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .menu-icon {
+        display: none;
+        text-align: right;
+        cursor: pointer;
+        margin-right: 20px;
+      }
+
+      .content-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f1f1f1;
+      }
+
+      .read-more {
+        display: none;
+      }
+
+      .read-more-btn {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #333333;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+    <title>Quantum Docs</title>
+  </head>
+  <body>
+    <link rel="icon" href="img/atom.png" type="image/x-icon" />
+    <header>
+      <div class="banner">
+        <h1>Quantum Docs</h1>
+        <p>
+          Breve introdução à computação quântica. Descubra suas aplicações,
+          desafios e oportunidades.
+        </p>
+      </div>
+    </header>
+
+    <nav>
+      <a class="menu-icon" onclick="toggleMenu()">&#9776; Menu</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="ingressar.html">Como Ingressar</a></li>
+        <li><a href="aplicacoes.html">Aplicações Práticas</a></li>
+        <li><a href="matematica.html">Matemática da Computação Quântica</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <!-- Novo link para FAQ -->
+      </ul>
+    </nav>
+
+    <div class="content-container">
+      <h2>Sobre a computação quantica</h2>
+      <h3>O que é?</h3>
+      <p>
+        A computação quântica é um paradigma revolucionário na área da
+        computação que utiliza os princípios da mecânica quântica para realizar
+        operações computacionais. Enquanto a computação clássica utiliza bits
+        que podem existir nos estados 0 ou 1, a computação quântica utiliza
+        qubits, que podem existir em múltiplos estados simultaneamente, graças a
+        um fenômeno chamado superposição quântica.
+      </p>
+      <div class="read-more" id="readMore">
+        <!-- Daqui pra baixo fica o conteudo para ler mais -->
+        <p>
+          Além da superposição, os qubits também podem estar entrelaçados, o que
+          significa que o estado de um qubit está diretamente relacionado ao
+          estado de outro, mesmo que estejam fisicamente separados. Essas
+          propriedades quânticas possibilitam que a computação quântica realize
+          certos cálculos de maneira exponencialmente mais eficiente do que os
+          computadores clássicos em algumas tarefas específicas.
+        </p>
+
+        <p>
+          A computação quântica tem o potencial de transformar
+          significativamente várias áreas, incluindo criptografia, simulações de
+          sistemas quânticos, otimização, inteligência artificial e descoberta
+          de novos materiais. Apesar dos avanços promissores, a construção de
+          computadores quânticos robustos e a superação dos desafios associados,
+          como a correção de erros quânticos, são áreas ativas de pesquisa.
+        </p>
+      </div>
+      <a href="javascript:void(0);"onclick="toggleReadMore()"class="read-more-btn">Continue a leitura!</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Quantum Docs</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+      }
+  
+      function toggleReadMore() {
+        var readMoreDiv = document.getElementById('readMore');
+        var readMoreBtn = document.querySelector('.read-more-btn');
+  
+        if (readMoreDiv.style.display === 'none' || readMoreDiv.style.display === '') {
+          readMoreDiv.style.display = 'block';
+          readMoreBtn.textContent = 'Esconder conteúdo';
+        } else {
+          readMoreDiv.style.display = 'none';
+          readMoreBtn.textContent = 'Continue a leitura!';
+        }
+      }
+  
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registrado com sucesso:', registration);
+          })
+          .catch(error => {
+            console.error('Erro ao registrar o Service Worker:', error);
+          });
+      }
+    </script>
+  </body>
+</html>

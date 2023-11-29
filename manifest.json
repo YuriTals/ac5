@@ -1,0 +1,16 @@
+{
+  "name": "Quantum Docs",
+  "short_name": "Quantum Docs",
+  "description": "Descubra o mundo da computação quantica!",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#343541",
+  "icons": [
+    {
+      "src": "img/atomg.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
