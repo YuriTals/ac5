@@ -147,6 +147,80 @@
       <p>Além da superposição, os qubits também podem estar entrelaçados, o que significa que o estado de um qubit está diretamente relacionado ao estado de outro, mesmo que estejam fisicamente separados. Essas propriedades quânticas possibilitam que a computação quântica realize certos cálculos de maneira exponencialmente mais eficiente do que os computadores clássicos em algumas tarefas específicas.</p>
 
       <p>A computação quântica tem o potencial de transformar significativamente várias áreas, incluindo criptografia, simulações de sistemas quânticos, otimização, inteligência artificial e descoberta de novos materiais. Apesar dos avanços promissores, a construção de computadores quânticos robustos e a superação dos desafios associados, como a correção de erros quânticos, são áreas ativas de pesquisa.</p>
+      <h4>Bits clássicos e bits quânticos</h4>
+      <p>
+      Um bit (clássico) é um termo binário: basicamente, um valor numérico pertencente ao conjunto {0,1}. O valor do bit pode ter diversas interpretações físicas: pode ser uma tensão elétrica, uma corrente elétrica, uma carga, etc. A regra é: o bit clássico sempre valerá 0 ou 1, nunca 0 e 1 simultaneamente.
+      Os qubits (bits quânticos) são termos binários que podem assumir estados superpostos (a grosso modo, 1 e 0 ao mesmo tempo). Os estados desses bits quânticos devem ser representados como vetores.
+      Os qubits possuem duas bases ortonormais: |0⟩ e |1⟩, onde:
+      <p>
+        <img src="img\img1.png"></p>
+      Como você deve ter reparado, um valor (como 0 ou 1) entre os caracteres “|” e “⟩” corresponde a um vetor. Este símbolo é chamado ket. Também existe o símbolo bra (“⟨…|”), para o qual ⟨x| corresponde à transposta conjugada do ket |x⟩. Neste caso, ⟨x|y⟩ é o produto interno dos vetores |x⟩ e |y⟩. Esta notação é chamada Bra-ket ou notação de Dirac. Os vetores que são representados pela notação Bra-ket pertencem a espaços de Hilbert — espaços vetoriais com noções de ângulo e distância que não necessariamente têm dimensões finitas.
+      Os possíveis estados de um qubit podem ser expressos pela seguinte combinação linear:
+      <p>
+        <img src="img\img2.png"></p>
+      Onde |ψ⟩ é um vetor no espaço vetorial ℂ² que representa o estado do qubit, e os coeficientes ω₀ e ω₁ são números complexos que representam as amplitudes de probabilidade dos estados |0⟩ e |1⟩.
+      Quando o estado |ψ⟩ é medido experimentalmente, manifesta um dos estados base |0⟩ e |1⟩ (fenômeno este que é conhecido na mecânica quântica como “colapso”). A probabilidade do estado |0⟩ se manifestar é |ω₀|² (quadrado do absoluto de ω₀), e a probabilidade do estado |1⟩ se manifestar é |ω₁|² (quadrado do absoluto de ω₁). Isto significa que:
+      </p>
+
+      <p><img src="img\img3.png">
+        <h5>
+          Esfera de Bloch</h5>
+        <p>
+          Representar graficamente um vetor em ℂ² não é tão simples. Um único número complexo com parte imaginária diferente de zero é análogo a um vetor em ℝ² (uma dimensão para a parte real e outra para o fator real da unidade imaginária), e seguindo esta mesma lógica, um vetor em ℂ² é análogo a um vetor em ℝ⁴, que não pode ser representado graficamente usando o sistema de coordenadas cartesiano. No entanto, um vetor em ℂ² que representa especificamente o estado de um qubit pode ser generalizado pela seguinte fórmula:
+        </p>
+        <p>
+          <img src="img\img4.png"></p>
+        <p>
+          Onde θ e ϕ são ângulos em radianos.
+          Usando esta fórmula (4), é possível representar graficamente o estado de um qubit em coordenadas polares, como mostra a imagem a seguir:
+        </p>
+        <p>
+          <img src="img\img5.png"></p>
+
+        <p>
+          Esta representação gráfica do estado de um qubit é denominada esfera de Bloch.
+          Repare que, na esfera de Bloch, θ é representado como o ângulo entre o vetor |ψ⟩ e o eixo z, e ϕ é representado como o ângulo entre a projeção do vetor |ψ⟩ no plano xy e o eixo x.
+          Registradores quânticos e estados globais
+          Com n bits, é possível formar 2ⁿ combinações de 1 e 0. Por exemplo: com um par de bits (um crumb) é possível formar as combinações 00, 01, 10 e 11 (um total de 2² combinações). Isso pode ser expresso matematicamente usando conjuntos, considerando bit={0,1}, da seguinte forma:
+        </p>
+        <img src="img\img6.png"></p>
+        <p>
+          Este símbolo parecido com a letra “x” na equação 5 é um produto cartesiano — um operador que produz um conjunto de tuplas com todas as combinações possíveis de elementos pertencentes aos conjuntos operandos. Este operador tem a seguinte definição:
+        </p>
+        <img src="img\img7.png"></p>
+        <p>
+          Com qubits é diferente: todos os estados devem ser representados por vetores, inclusive estados formados por mais de um qubit. Neste caso, o produto cartesiano não serve. É necessário usar um operador que produza um terceiro vetor ao invés de um conjunto de tuplas para representar as combinações de estados dos qubits. Este operador é o produto tensorial (também conhecido como kronecker), representado pelo símbolo “⊗”.
+          O estado de um “crumb de qubits” de estados |a⟩ e |b⟩ pode ser expresso como um produto tensorial de |a⟩ e |b⟩ da seguinte forma:
+        </p>
+        <img src="img\img8.png"></p>
+        <p>
+          Onde |ab⟩ é o estado global do par de qubits.
+          Este produto tensorial pode ser expresso mais detalhadamente da seguinte forma:
+        </p>
+        <img src="img\img9.png"></p>
+        <p>
+          No geral, um produto tensorial entre um par de matrizes A e B tem a seguinte definição</p>
+        <img src="img\img10.png"></p>
+        <p>
+          Voltando ao exemplo do crumb — definindo os qubits |a⟩ e |b⟩ como:
+        </p>
+        <img src="img\img11.png"></p>
+        <p>
+          O estado global |ab⟩ pode ser definido como a seguinte combinação linear de 4 bases:
+        </p>
+        <img src="img\img12.png"></p>
+        <p>
+          Considerando |ψ⟩=|ab⟩, α=α₀β₀, β=α₀β₁, γ=α₁β₀, δ=α₁β₁, substituindo as amplitudes αₙβₘ pelas equivalentes α, β, γ e δ, temos:
+        </p>
+        <img src="img\img13.png"></p>
+        <p>
+          Onde:
+        </p>
+        <img src="img\img14.png"></p>
+        <p>
+          
+        </p>
+      </p>
     </div>
     <a href="javascript:void(0);" onclick="toggleReadMore()" class="read-more-btn">Continue a leitura!</a>
   </div>
